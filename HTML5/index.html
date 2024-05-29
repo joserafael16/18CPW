@@ -12,7 +12,7 @@
     -->
     <!-- Parrafo -->
 
-    <P>HOLA MUNDO</P>
+    <P id="holamundo">HOLA MUNDO</P>
     <!--Titulares-->
     <h1>Soy un titulo</h1>
     <h2>Soy un subtitulo</h2>
@@ -23,13 +23,15 @@
 
     <!--Imagen-->
 
-    <img src="images/tigre.jpg" alt="tigre">
+    <img id="Tigre" src"images/tigre.jpg" alt="tigre">
     <img src="images/tigre.jpg" alt="tigre" width="200px" height="500px">
-
-    <!--Videos (you tube)-->
+     <!--Imagen-->      
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3k8rNsiWTvBTOHMX4jnVLyut4uwIh__iDAV0BWneBOw&s" alt="" 
+     
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI0hp9C8l5ih0V8WexFPDmNQ4jZA0pjVUO3g&s" alt="carro"
     
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/btPJPFnesV4?si=afxUF6XihtJ3Uj1C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     
+     <!--VIDEOS YOU TUBE-->               
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/fYg_BWlP_Gk?si=satWn9NNACrwKpzB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -39,9 +41,169 @@
 
     <!--Videos (local)-->
      <video controls autoplay loop src="videos/WhatsApp Video 2024-05-25 at 10.07.14 AM.mp4"></video>
-    
-    
+     
+    <video src=""></video>
+    <!--listas-->
+    <!--Listas organizadas/ordenada-->   
+    <ol>
+        <li>Tener todos los materiales</li>
+        <li>Hacer la mezcla</li>
+        <li>Cocinar la mezcla</li>
+    </ol>    
+    <!--Listas no organizadas-->
+    <ul>
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>Php</li>
+    </ul>
+    <!--Tablas-->
+    <table>
+        <!--Cabezera de la tabla-->
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <!--Datos de la tabla-->
+        <tr>
+            <td>Jose</td>
+            <td>Rodriguez</td>
+            <td>55</td>
+        </tr>
+    </table>
+    <!--Boton-->
+    <button>Presioname</button>
+    <!--Ancla (link)-->
+    <a href="https://www.youtube.com" target="_blank">Ir a Youtube</a>
+    <a href="https://www.google.com" target="_blank">
+        <button>Ir a Google</button>
+        <a href="https://www.google.com" target="_blank">
+            <p>la clases de programador web son muy interesantes</p>
+        </a> 
+        <a href="Pages/contacto.html" target="_blank">
+            Contactanos
+        </a>
+    <!--Descargar un archivo-->
+    <a href="images/tigre.jpg" download="tigrebengala.jpg">
+        Descargar imagen
+    </a>
 
+    <!-- ID y CLASE-->
+    <p id="ParrafoEjemplo">Soy un identificador</p>
+    <P id="enlaceEjemplo" href=""></P>
+
+    <p class="rojo">Ejemplo de clase</p>
+    <p class="rojo contenedor parrafo">Ejemplo de clase 2</p>
+
+    <a href="#holamundo">
+        <button>Subir</button>
+    </a>
+    <a href="#Tigre">
+        <button>ir al Tigre</button>
+    </a>
+<!--Imputs (entradas)-->
+<!--Imput de Texto-->
+<input 
+type="text" 
+name="nombre" 
+placeholder="Escribe tu nombre" 
+maxlength="50" 
+minlength="2"
+value="Jose"
+readonly
+disabled
+>
+ <!--Imput de numero-->
+ <input type="number" name="edad" id="edad"> 
+ <!--Imput de correo electronico-->
+ <input type="email" name="correo" id="correo" placeholder="Escribe tu correo Electronico">
+<!--Imput de fecha-->
+<input type="date" name="fnacimiento" id="fnacimiento"min="2003-01-01" max="2024-12-31">
+<!--Imput colores-->
+<input type="color" name="" id="">
+<!--Input checkbox-->
+<label for="notificaciones"></label>
+<input type="checkbox" name="terminos" id="notificaciones" value="accept" >
+aceptar notificaciones al correo electronico
+<!--Imput Radio-->
+<label for="carro"></label>
+<input type="radio" name="transporte" id="carro">
+Bus
+<!--Imput de Botones-->
+<input type="button" value="Enviar">
+<input type="submit" value="Enviar datos">
+<input type="reset" value="">
+
+<!--Saltos de linea-->
+<br>
+<br>
+<br>
+<!--Formulario-->
+<form action="">
+    <!--Nombre-->
+    <label for="name">Nombre</label>
+    <input type="text" name="name" id="name" placeholder="Escribe tu Nombre">
+
+    <!--Apellido-->
+    <label for="lastname">Apellido</label>
+    <input type="text" name="lastname" id="lastname" placeholder="Escribe tu Apellido">
+
+    <!--Correo Electronico-->
+    <label for="email">Correo Electronico</label>
+    <input type="email" name="email" id="email" placeholder="Escribe tu correo Electronico">
+
+    <!--Selection-->
+    <label for="pais">Pais</label>
+
+    <select name="pais" id="pais">
+        <option value=""selected disabled>Selecciona un pais</option>
+        <option value="Venezuela">Venezuela</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Italia"selected>Italia</option>
+        <option value="Argentina">Argentina</option>
+
+    </select>
+
+    <!--Textarea-->
+    <label for="Descripcion">Descripcion</label>
+    <textarea name="Descripcion" id="Descripcion" rows="10" cols="30"></textarea>
+
+    <!--Imput oculto-->
+    <input type="hidden" name="oculto" value="loquesea">
+
+    <!--Boton para enviar formulario-->
+    <input type="submit" value="Enviar datos">
+        
+</form>
+
+<!--Div (Division, caja, Contenedor)-->
+<div style="background-color: gray;">
+    <h3>Soy un Programador WEB</h3>
+    Hola desde el div
+</div>
+
+<!--Spam-->
+<p>Yo voy a ser un programador web, porque estoy esforzandome mucho en aprender y <span style="color: blue;"> porque el profesor Elimalech esta dando lo mejor de si para que aprenda y Dios esta a mi lado</span>
+</p>
+<!--HTML Semantico-->
+<!--Barra de navegacion-->
+<nav></nav>
+<!--Contenido lateral-->
+<aside></aside>
+<!--Contenido Principal-->
+<main></main>
+<!--Contenido Articulo-->
+<Article></Article>
+<!--Direccion-->
+<address></address>
+<!--Secciones-->
+<section></section>
+<!--Pie de pagina-->
+<footer></footer>
+<!--Cabezera-->
+<header></header>
 
 </body>
 </html>
