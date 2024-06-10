@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* sirve para que el paddind y el margin no se sume al valor total de mi cajita o del elemento */
+
+}
+
+main{
+    /* Grid = Grilla */
+    display:grid ;
+    /* grid-template-columns: me permite definir columnas ;*/
+    /*grid-template-columns: 200px 300px auto;*/ /* aqui tengo el valor de 3 columnas. Si quiero un valor automatico le agrego auto (ocupta todo el espacio restante) */
+    /* grid-template-rows: permite definir filas ;*/
+    /*grid-template-rows:150px 300px auto ;*/
+    grid-template-rows: repeat(3, 1fr);
+    /* row-gap: column-gap: ; (podemos colocar una separacion en las filas y las columnas)*/
+    /* row-gap: 20px;
+    column-gap: 30px; */
+    grid-template-columns:repeat(3,1fr); /* podemos definir 4 columnas de igual tamano, por ejemplo (4, (columnas) 1fr (va ocupar 1 fraccion del elemento disponible de manera uniforme) */
+    /* si uso GAP por ejemplo de 20px se aplicara tanto a las filas como a las columnas */
+    gap: 20px;
+    height: 100vh;
+}
+
+main div{
+    border: 3px solid red;
+
+}

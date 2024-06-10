@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grip-contenedor{
+    display: grid;
+    grid-template-columns: 1fr 3fr ; /* Quiero que tenga 2 columnas, una mas pequena (Aside) y otra mas grande para el main/section */
+    grid-template-rows:auto 1fr auto ; /* Quiero una fila automatica para el header y footer y una flexible para el contenido principal */
+    /* grid-area: ;*/
+    grid-template-areas: 
+                "header header"
+                "aside main"
+                "aside section"
+                "footer footer";
+
+    gap: 10px;
+    min-height: 100vh;
+
+}
+
+.header{
+    grid-area: header;
+    background-color: aqua;
+    color: white;
+
+
+}
+
+.aside{
+    grid-area: aside;
+    background-color: blue;
+
+}
+
+.main{
+    grid-area: main;
+    background-color:yellow ;
+    
+}
+
+.section{
+    grid-area: section;
+    background-color:green ;
+    
+}
+
+.footer{
+    grid-area: footer;
+    background-color:red ;
+    
+
+}
