@@ -45,6 +45,7 @@ color: chocolate;
 :root{
     /*defino una variable*/
   --verde: rgb(47, 192, 109);
+} 
 
 contenedor{
     /*llamo a una variable*/
@@ -186,17 +187,161 @@ vmax = vieport maximo
     height:200px ;
     /*background-color : valor = permite cambiar el color de fondo*/
 /* r = red g = green b = blue a = alpha (transparencia)*/
+
    background-color: rgb(35, 227, 22,0,7); 
-   background-image: url("../images/tigre.jpg");
-
+    /*background-image: valor = permite colocar imagen de fondo*/     
+   /*background-image: url("../images/tigre.jpg"),url(https://img.freepik.com/foto-gratis/jumbo-jet-volando-cielo_23-2150895681.jpg);*/
+   /*background-image: linear-gradient(to top,red, rgba(0,0,0,0)), url("../images/tigre.jpg")*/
+   /* background-image: linear-gradient(120deg,red, blue,yellow);*/
+   /*background-image: linear-gradient(transparent,rgba(0,0,0,0.8)),url("../images/tigre.jpg")*/
+   background-image: linear-gradient(circle at center, red, blue)
+ /*background-repeat : valor = permite indicar si queremos repetir la imagen (mosaico);*/
    background-repeat:no-repeat ;
+    /*permite ajustar la posicion de la imagen de fondo
+   background-position:right top,left bottom;*/
 
-   background-position:center center;
+   /*backgroun-size : valor = permite colocar un tamano a la imagen*/
+   /* por ejemplo 2 imagenes las ponemos px y separamos por una coma 100px, 200px*/
+   background-size: cover; 
 
-   background-size: cover;
+  /* background-attachment: fixed, scroll;*/
+
+        
 }
-/*Background-image: valor = para crear una imagen de fondo*/
 
+/*bordes*/
+
+#cajita5{
+    width: 200px;
+    height: 200px;
+    /*border style*/
+   /* border-style: double;
+   border-width: permite cambiar el tamano del borde;
+   border-width:10px ;
+   border-color: permite cambiar el color del borde;
+   border-color: yellow;*/
+  /* border:5px solid red ;*/
+  /*border-right: 5px solid blue;*/
+  /*border-left: 10px solid yellow;*/
+  /*border-top: 6px solid yellow;*/
+  /*border-bottom: 15px solid black ;*/
+  /*border-radius: ;*/
+  border-radius:5px 10px 50px 20px ;
+  margin-bottom: 200px;
+}
+
+/*margenes*/
+#cajita6{
+   width: 300px;
+   height: 300px; 
+   /*margin*/
+   /*margin: 20px;*/
+   margin-top: 20px;
+   margin-left: 100px;
+   margin-right: 10px;
+   margin-bottom: 200px;
+}
+    /*padding (funciona como el margen pero de manera interna)*/
+    #cajita7{
+         width: 150px;
+         height:150px ;
+  /*padding*/
+padding:20px ;
+
+}
+
+#cajita7 section{
+    width:50px ;
+    height:50px ;
+    background-color: red;
+
+}
+
+/*pseudo elementos (pseudo clases)*/
+/* link (permite cambiar de color a un link no visitado)*/
+#enlace1:link{
+    color: blue;
+
+}
+/*visited (permite cambiar el estilo de un link visitado)*/
+#enlace1:visited{
+    color:green
+}
+
+/* hover: (permite que el momento de pasar el cursor por encima del elemento cambie el estilo)*/
+#boton1:hover{
+    background-color: red;
+    color: white;
+    padding: 20px 10px;
     
+
+}
+/* active (link seleccionado)*/
+#enlece1:active{
+    color: green;
+}
+
+/* focus: funciona para los input*/
+#input1:focus{
+    background-color: blue;
+    color:white
+
+}
+
+/* :first-child:last-child:nth-child()*/
+#cajita8 p:first-child{
+    color: violet;
+}
+
+#cajita8 p:last-child{
+    color:red
+}
+
+#cajita8 p:nth-child(2){
+    color: aqua;
+}
+
+/*pseudo elemntos*/
+/* ::first-line (afecta la primera linea)*/
+#parrafo2::first-line{
+    color:chocolate
+}
+/*::first-letter: (afecta la primeta letra)*/
+
+#parrafo2::first-letter{
+
+ color:blue
+ font-size:50px 
+
+}
+
+/* ::before (permite anadir contenido antes del elemento,una imagen, etc)*/
+#parrafo2::before{
+    content: "HOLA";
+    
+}
+
+
+/* :: after (permite colocar un contenido despues del elemento)*/
+#parrafo2::after{
+    content: "FINAL";
+    color: red;
+    font-size: 40px;
+}
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3<li/>
+</ul>
+
+
+
+
+
+
+
+
+
+
 
 
