@@ -1,0 +1,124 @@
+/*posiciones*/
+/* static (default) */
+/* relative (posicion relativa) */
+/* absolute (posicion absoluta) */
+/* fixed (posicion fixed) */
+/* stichy (posicion stychy) */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+   /* position:static ; */
+   width: 100%;
+   position: fixed;
+   background-color:#867c7c64 ;
+    
+}
+
+main{
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding-top:50px ;
+}
+
+aside{
+  position: sticky; 
+   width: 100%;
+   height: 100px;
+   background-color: red; 
+   z-index: 10;
+   /* superior (arriba) */
+   /* inferior (abajo) */
+   /* izquierda (left: ;) */
+   /* derecha (right: ;) */
+   /* top: 0; */
+   top: 50px;
+
+}
+
+ 
+#section1{
+    position: relative;
+    height: 100vh;
+    background-color: rgb(35, 35, 35);
+}
+ 
+#section1 div{
+    position: absolute;
+    left: 200px;
+    top: 0;
+width: 100px;
+height: 100px;
+background-color: green;
+}
+
+#seccion2{
+    position: relative;
+    height:100vh ;
+}
+
+#seccion2 div{
+    width:200px ;
+    height: 200px;
+}
+
+#seccion2 div:first-child {
+ background-color: blue;
+position: absolute;
+left: 100px;
+top: 150px;
+/* z-index  permite controlar el eje z */
+z-index: 5;
+}
+
+#seccion2 div:nth-child(2){
+    background-color: green;
+    position:absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 3;
+}
+
+#seccion2 div:last-child{
+    background-color: #64005c;
+    position:absolute;
+    top: 50px;
+    left: 70px;
+    z-index: 4;
+}
+
+/* display pantalla
+hay elementos en bloque : Div, h1-h6, p, formulario, footer, nav
+hay elementos en linea : a, img, span
+
+display: none nos permite ocultar el elemnto en su totalidad
+display: permite convertir un elemnto a un elemento en linea
+display: block permite convertir un elemento a un elemento en bloque
+
+
+*/
+
+#seccion3{
+    height: 100vh;
+}
+
+#seccion3 div{
+    display: inline;
+    width: 200px;
+    height: 10px;
+    background-color: aqua;
+    
+}
+#seccion3 p{
+    display:inline ;
+}
+
+#seccion3 span{
+    display: block;
+}
+
+/* flex box */
