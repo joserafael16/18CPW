@@ -1,0 +1,177 @@
+/* TRANSFORM */
+
+#transform{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    /*transform: translateX(400px);*/
+    /*transform: translateY(400px);*/
+   /* transform: translate(300px,200px);me toma los valores de x e y */
+   /*transform: rotate: podemos rotar el elemento en grados;*/
+   /*transform: rotate(45deg) translate(100px,200px)*/
+   /*scale el elemento lo podemos escalar tanto en el eje x como en el eje y poniendo los mismos valores (funciona como la opacidad con valores de 0 a 1)ejemplo si quiero que mantenga su mismo tamno de elemento pero si yo le digo 1.1 va aumentar el 10% de su tammano, si yo le digo 1.5 aumenta un 50%, si yo le digo 0.9 reduce su tamano. si quiero ser mas especifico pongo 2 valares x e y, por ejemplo 0.5,2, siempre seprados por una coma y entre parentesis*/
+   /*skew sieve para distorcionar un elemento y es en grados*/
+   transform: rotate(170deg) translate(1px,-4px) scale(1, 1) skew(30deg, -5deg);
+    
+}
+
+section{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+}
+
+main{
+    position: relative;
+    height: 500px;
+    background-color: bisque;
+}
+
+main article{
+    position: absolute;
+   /*top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);si lo hacemos en valores negativos hace lo contrario, si es positivo TOP de arriba hacia abajo y se BOTTON abajo hacia arriba si lo colocamos como negativo hara lo contrario de arriba hacia abajo*/ 
+    bottom: 50%;
+    right: 50%;
+    /* puedo usar transform cuandola posicion es absoluta del elemento*/
+    transform: translate(50%, 50%);
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+/* Transiciones */
+
+/*
+- transition-property : Nos permite indicar a que propiedad vamos a generar la transicion
+- transition-duration : Nos permite colocar el tiempo de duracion de la transicion
+- transition-timing-function : Nos permite controlar las velociades de el proceso de la transicion
+- transition-delay : Nos permite generar un atraso en la transicion.
+- transition : Nos permite colocar todas las demas propieades en una sola siguiendo el orden que tengo arriba trasition-property, tyransition-duration, transition-timing-fuction,etc
+
+*/
+
+#transicion{
+    height: 100vh;/* se usa 100vh para que ocupe el 100% de la altura */
+}
+
+#transicion button{
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    /*
+    transition-property: background-color: ;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-out, linear, ease, ease-in,ease-out, ease-in-out;
+    transition-delay: 5s;
+    transition: podemos colocar todas las propiedades;*/
+    transition: all 2s cubic-bezier(1, 1, 0.01, 0.01) 0s;
+}
+/* cuando uso la propiedad "hover" el boton cambia de color*/
+#transicion button:hover{
+    background-color: red;
+    color: yellow;
+    font-size: 25px;
+}
+
+/* Animaciones */
+
+/*
+- animation-name: Aqui vamos a colocar el nombre de la animacion que vamos a aplicar al elemento
+- animation-duration: Aqui vamos a colocar la duracion de la animacion.
+- animation-iteration-count : Aqui vamos a colocar cuantas veces se va a repetir la animacion.
+- animation-direction : Aqui vamos a colocar la direccion de la animacion, si empieza de inicio a fin o viceversa
+- animation-timing-function : Nos permite controlar las velociades en el proceso de la animacion.
+- animation-fill-mode : Nos permite decir como actuara la animacion en un bucle.
+- animation : Nos permite colocar todas las propiedades anteriores en una linea de codigo.
+
+@keyframes nombre-animacion {
+ 0%{ background-color:red; }
+ 10%{ background-color: green; }
+ 30%{ background-color: white; }
+ 50%{ background-color: black; }
+ 100%{ background-color: purple; }
+}
+
+*/
+
+#animacion{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+#animacion div{
+    width: 300px;
+    height: 300px;
+    background-color: purple;
+    border-radius: 50px;
+    animation-name: changeColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+@keyframes changeColor{
+    0%{ 
+        background-color: purple;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    25%{ 
+        background-color: yellow;
+    }
+    100%{ 
+        opacity: 1;
+        background-color: green;
+        transform: rotate(360deg) translateX(200px);
+    }
+}
+
+@keyframes rotate{
+    0%{ transform: rotate(0deg); }
+    100%{transform: rotate(140deg);}
+}
+
+/* OVERFLOW  : NOS PERMITE CONTROLAR SI UN ELEMENTO PUEDE SALIRSE DE SUS LIMITACIONES*/
+
+#overflow{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    color: rgb(255, 0, 0);
+    font-size: 45px;
+    /*overflow-y: hidden;
+    overflow-x: auto;*/
+    overflow: scroll;
+}
+
+@media (min-width: 640px){
+    #overflow{
+        background-color: green;
+    }
+}
+
+@media (min-width: 800px){
+    #overflow{
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 1000px){
+    #overflow{
+        background-color: blue;
+    }
+}
+
+@media (min-height: 500px){
+    #overflow{
+        color: purple;
+    }
+}

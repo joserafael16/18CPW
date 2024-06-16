@@ -13,14 +13,47 @@ nav #logo{
     width: 95px;
 }
 
+nav input{
+    display: none;
+}
+
+nav input:checked ~ aside{
+    right: 0;
+}
+
+nav label{
+    z-index: 2;
+}
+
 nav #menu-burger{
     width: 30px;
 }
 
-nav ul{
+nav .menu-desktop{
     display: none;
     gap: 20px;
     list-style: none;
+}
+
+nav aside{
+    width: 280px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -280px;
+    background-color: rgb(200, 200, 200);
+    transition: right 0.3s linear;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 60px 10px;
+}
+
+nav aside ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 main, section{
@@ -35,7 +68,7 @@ section{
 }
 
 @media (min-width : 740px){
-    nav ul{
+    nav .menu-desktop{
         display: flex;
     }
     nav #menu-burger{
