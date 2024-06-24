@@ -1,0 +1,151 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6441a5;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    
+}
+
+.sidebar {
+    width: 100%;
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 80px;
+    
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #6441a5;
+    font-weight: bold;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.featured-stream {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.featured-stream video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stream-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.categories {
+    margin-top: 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-item a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+}
+
+.category-title {
+    text-align: center;
+    padding: 10px;
+    background-color: #6441a5;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .navbar .search-bar input {
+        width: 300px;
+    }
+
+    .main-content {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .category-item {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
